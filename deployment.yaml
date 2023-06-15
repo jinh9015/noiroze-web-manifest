@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: noiroze-web
-          image: jinh9015/noiroze-web:0
+          image: jinh9015/noiroze-web:3
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
