@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: noiroze-web
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: noiroze-web
+  template:
+    metadata:
+      labels:
+        app: noiroze-web
+    spec:
+      containers:
+        - name: noiroze-web
+          image: jinh9015/noiroze-web:0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+          resources:
+            requests:
+              cpu: 250m
+            limits:
+              cpu: 500m
