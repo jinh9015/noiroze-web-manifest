@@ -13,14 +13,14 @@ spec:
       labels:
         app: noiroze-web
     spec:
-      initContainers:
+      initContainers: 
         - name: migrate
-          image: jinh9015/noiroze-web:3
+          image: jinh9015/noiroze-web:5
           imagePullPolicy: Always
           command: ["sh", "-c", "python manage.py makemigrations && python manage.py migrate"]
       containers:
         - name: noiroze-web
-          image: jinh9015/noiroze-web:4
+          image: jinh9015/noiroze-web:5
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
